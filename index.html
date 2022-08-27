@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <div class="page-top">
+        <h1 class="page-title">Tic-Tac-Toe</h1>
+        <h4 class="dark-mode">DARK MODE</h2>
+    </div>
+
+
+    <div class="player-options">
+
+        <label for="difficulty">Difficulty</label>
+        <select name="difficulty" class="difficulty" id="difficulty">
+            <option value="easy">Easy Mode</option>
+            <option value="normal">Normal Mode</option>
+            <option value="hard">Hard Mode</option>
+            <option value="rip">R.I.P.</option>
+        </select>
+
+        <label for="game-mode">Game Mode</label>
+        <select name="game-mode" id="gameMode">
+            <option value="pvp">Player vs Player</option>
+            <option value="pve">Player vs AI</option>
+        </select>
+
+        <button class="reset-score" id="resetScore">Reset Score</button>
+
+    </div>
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- Quick Notes & Ideas -->
+
+<!-- Use CSS Grid with borders to make up player interface -->
+
+<!-- While PvP is selected, make difficulty dropdown inaccessible & vice versa -->
