@@ -15,23 +15,46 @@
     </div>
 
 
-    <div class="player-options">
+    <div class="player-options-one">
 
-        <label for="difficulty">Difficulty</label>
-        <select name="difficulty" class="difficulty" id="difficulty">
-            <option value="easy">Easy Mode</option>
-            <option value="normal">Normal Mode</option>
-            <option value="hard">Hard Mode</option>
-            <option value="rip">R.I.P.</option>
-        </select>
+        <div class="difficulty-options">
+            <label for="difficulty">Difficulty</label>
+            <select name="difficulty" class="difficulty" id="difficulty">
+                <option value="easy">Easy Mode</option>
+                <option value="normal">Normal Mode</option>
+                <option value="hard">Hard Mode</option>
+                <option value="rip">R.I.P.</option>
+            </select>
+        </div>
 
-        <label for="game-mode">Game Mode</label>
-        <select name="game-mode" id="gameMode">
-            <option value="pvp">Player vs Player</option>
-            <option value="pve">Player vs AI</option>
-        </select>
+        <div class="game-mode-options">
+            <label for="game-mode">Game Mode</label>
+            <select name="game-mode" id="gameMode">
+                <option value="pvp">Player vs Player</option>
+                <option value="pve">Player vs AI</option>
+            </select>
+        </div>
 
         <button class="reset-score" id="resetScore">Reset Score</button>
+
+    </div>
+
+    <div class="player-options-two">
+        <button class="choose-x" id="chooseX">X</button>
+        <button class="choose-o" id="chooseO">O</button>
+    </div>
+
+    <div class="player-interface" id="playerInterface">
+
+        <div class="top-left" id="topLeft"></div>
+        <div class="top-mid" id="topMid"></div>
+        <div class="top-right" id="topRight"></div>
+        <div class="mid-left" id="midLeft"></div>
+        <div class="mid-mid" id="midMid"></div>
+        <div class="mid-right" id="midRight"></div>
+        <div class="btm-left" id="btmLeft"></div>
+        <div class="btm-mid" id="btmMid"></div>
+        <div class="btm-right" id="btmRight"></div>
 
     </div>
 
