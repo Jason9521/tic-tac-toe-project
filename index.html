@@ -11,7 +11,7 @@
 <body>
     <div class="page-top">
         <h1 class="page-title">Tic-Tac-Toe</h1>
-        <h4 class="dark-mode">DARK MODE</h2>
+        <h4 class="dark-mode" id="darkMode">DARK MODE</h2>
     </div>
 
 
@@ -20,18 +20,18 @@
         <div class="difficulty-options">
             <label for="difficulty">Difficulty</label>
             <select name="difficulty" class="difficulty" id="difficulty">
-                <option value="easy">Easy Mode</option>
-                <option value="normal">Normal Mode</option>
-                <option value="hard">Hard Mode</option>
-                <option value="rip">R.I.P.</option>
+                <option value="easy" id="easy">Easy Mode</option>
+                <option value="normal" id="normal" selected>Normal Mode</option>
+                <option value="hard" id="hard">Hard Mode</option>
+                <option value="rip" id="rip">R.I.P.</option>
             </select>
         </div>
 
         <div class="game-mode-options">
             <label for="game-mode">Game Mode</label>
             <select name="game-mode" id="gameMode">
-                <option value="pvp">Player vs Player</option>
-                <option value="pve">Player vs AI</option>
+                <option value="pvp" id="pvp">Player vs Player</option>
+                <option value="pve" id="pve" selected>Player vs AI</option>
             </select>
         </div>
 
@@ -42,6 +42,18 @@
     <div class="player-options-two">
         <button class="choose-x" id="chooseX">X</button>
         <button class="choose-o" id="chooseO">O</button>
+    </div>
+
+    <div class="scoreboard">
+        <div class="score-one">
+            <h4 class="player-one" id="playerOne"></h4>
+            <h4 class="player-one-score" id="playerOneScore"></h4>
+        </div>
+
+        <div class="score-two">
+            <h4 class="player-two" id="playerTwo"></h4>
+            <h4 class="player-two-score" id="playerTwoScore"></h4>
+        </div>
     </div>
 
     <div class="player-interface" id="playerInterface">
