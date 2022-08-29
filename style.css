@@ -1,4 +1,3 @@
-/* font-family: 'Noto Sans', sans-serif; */
 
 * {
     margin: 0;
@@ -12,4 +11,148 @@
 
 body {
     background-color: orangered;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.page-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    padding: 2.5rem 0;
+}
+
+.dark-mode {
+    letter-spacing: 0.1rem;
+}
+
+.dark-mode:hover {
+    cursor: pointer;
+}
+
+.player-options-one {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    padding-bottom: 2rem;
+}
+
+
+
+.reset-score {
+    height: 2rem;
+    width: 9rem;
+    border: none;
+}
+
+.player-options-two {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    padding-bottom: 3rem;
+}
+
+.choose-x,
+.choose-o {
+    height: 2rem;
+    width: 9rem;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.choose-x:hover,
+.choose-o:hover {
+    cursor: pointer;
+    height: 2.1rem;
+    width: 9.1rem;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 4rem;
+}
+
+.score-one,
+.score-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.player-one,
+.player-two {
+    text-decoration: underline solid 3px;
+}
+
+.player-one-score,
+.player-two-score {
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+/* PLAYER INTERFACE */
+
+.player-interface {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 25rem;
+    width: 25rem;
+    margin: 0 auto;
+    background-color: orangered ;
+}
+
+.top-left,
+.top-mid,
+.top-right,
+.mid-left,
+.mid-mid,
+.mid-right,
+.btm-left,
+.btm-mid,
+.btm-right {
+    border: 0.5rem solid black;
+}
+
+.top-left:hover,
+.top-mid:hover,
+.top-right:hover,
+.mid-left:hover,
+.mid-mid:hover,
+.mid-right:hover,
+.btm-left:hover,
+.btm-mid:hover,
+.btm-right:hover {
+    cursor: pointer;
+}
+
+.top-left,
+.top-mid,
+.top-right {
+    border-top: none;
+}
+
+.top-right,
+.mid-right,
+.btm-right {
+    border-right: none;
+}
+
+.btm-left,
+.btm-mid,
+.btm-right {
+    border-bottom: none;
+}
+
+.top-left,
+.mid-left,
+.btm-left {
+    border-left: none;
+}
+
+
+.disabled {
+    opacity: 0.6;
+    pointer-events: none;
 }
