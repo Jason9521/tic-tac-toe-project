@@ -38,7 +38,7 @@ body {
 
 
 
-.reset-score {
+.reset {
     height: 2rem;
     width: 9rem;
     border: none;
@@ -70,7 +70,7 @@ body {
 .scoreboard {
     display: flex;
     justify-content: space-evenly;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 
 .score-one,
@@ -89,6 +89,21 @@ body {
 .player-two-score {
     padding-top: 1rem;
     font-size: 2rem;
+}
+
+/* MESSAGE LOG */
+.message-log {
+    margin-bottom: 2rem;
+}
+
+.message {
+    height: 3rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: aqua;
 }
 
 /* PLAYER INTERFACE */
@@ -155,4 +170,11 @@ body {
 .disabled {
     opacity: 0.6;
     pointer-events: none;
+}
+
+.symbol {
+    text-align: center;
+    font-weight: 900;
+    font-size: 5rem;
+    padding: 0;
 }
