@@ -9,55 +9,51 @@
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
-    <div class="page-top">
-        <h1 class="page-title">Tic-Tac-Toe</h1>
-        <h4 class="dark-mode" id="darkMode">DARK MODE</h2>
-    </div>
+   
 
+    <h1 class="page-title">Tic-Tac-Toe</h1>
+   
+    <div class="option-container">
 
-    <div class="player-options-one">
-
-        <div class="difficulty-options">
-            <label for="difficulty">Difficulty</label>
-            <select name="difficulty" class="difficulty" id="difficulty">
-                <option value="easy" id="easy">Easy Mode</option>
-                <option value="normal" id="normal" selected>Normal Mode</option>
-                <option value="hard" id="hard">Hard Mode</option>
-                <option value="rip" id="rip">R.I.P.</option>
-            </select>
+        <div class="player-options-one">
+            <div class="difficulty-options">
+                <select name="difficulty" class="difficulty disabled" id="difficulty">
+                    <option value="easy" id="easy">Easy Mode</option>
+                    <option value="normal" id="normal" selected>Normal Mode</option>
+                    <option value="hard" id="hard">Hard Mode</option>
+                    <option value="rip" id="rip">R.I.P.</option>
+                </select>
+            </div>
+            <div class="game-mode-options">
+                <select name="game-mode" id="gameMode">
+                    <option value="pvp" id="pvp">Player vs Player</option>
+                    <option value="pve" id="pve">Player vs AI</option>
+                </select>
+            </div>
         </div>
 
-        <div class="game-mode-options">
-            <label for="game-mode">Game Mode</label>
-            <select name="game-mode" id="gameMode">
-                <option value="pvp" id="pvp">Player vs Player</option>
-                <option value="pve" id="pve" selected>Player vs AI</option>
-            </select>
+        <div class="player-options-two">
+            <button class="choose-x" id="chooseX">X</button>
+            <button class="choose-o" id="chooseO">O</button>
+            <button class="replay" id="replay">Play Again</button>
+            <button class="reset" id="reset">Reset</button>
         </div>
-
-        <button class="reset" id="reset">Reset</button>
-
-    </div>
-
-    <div class="player-options-two">
-        <button class="choose-x" id="chooseX">X</button>
-        <button class="choose-o" id="chooseO">O</button>
     </div>
 
     <div class="scoreboard">
         <div class="score-one">
-            <h4 class="player-one" id="playerOne"></h4>
-            <h4 class="player-one-score" id="playerOneScore"></h4>
+            <h4 class="player-one" id="playerOne">Player One</h4>
+            <h4 class="player-one-score" id="playerOneScore">0</h4>
         </div>
 
         <div class="score-two">
-            <h4 class="player-two" id="playerTwo"></h4>
-            <h4 class="player-two-score" id="playerTwoScore"></h4>
+            <h4 class="player-two" id="playerTwo">Player Two</h4>
+            <h4 class="player-two-score" id="playerTwoScore">0</h4>
         </div>
     </div>
 
     <div class="message-log">
-        <h3 class="message" id="message">This is a test message</h3>
+        <h3 class="message" id="message">Choose  'X'  or  'O'  to begin</h3>
     </div>
 
     <div class="player-interface" id="playerInterface">
@@ -74,14 +70,6 @@
 
     </div>
 
-
-    
     <script src="script.js"></script>
 </body>
 </html>
-
-<!-- Quick Notes & Ideas -->
-
-<!-- Use CSS Grid with borders to make up player interface -->
-
-<!-- While PvP is selected, make difficulty dropdown inaccessible & vice versa -->

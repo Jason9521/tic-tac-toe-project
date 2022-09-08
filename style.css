@@ -6,70 +6,120 @@
 }
 
 :root {
-
+    --grey: #788394;
+    --black: #302b27;
+    --white: #f5f5f5;
+    --light-blue: #576ca8;
+    --blue: #274690;
+    --dark-blue: #1b264f;
 }
 
 body {
-    background-color: orangered;
+    background: rgb(120,131,148);
+    background: radial-gradient(circle, rgba(120,131,148,1) 4%, rgba(67,86,139,1) 100%);
     font-family: 'Noto Sans', sans-serif;
+    color: var(--white);
 }
 
-.page-top {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-evenly;
-    padding: 2.5rem 0;
+button {
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 15px;
+    
 }
 
-.dark-mode {
-    letter-spacing: 0.1rem;
-}
-
-.dark-mode:hover {
+button:hover {
     cursor: pointer;
+    background-color: #3863c7;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding-bottom: 2rem;
+}
+
+.option-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 3rem;
+    width: clamp(15rem, 80%, 50rem);
 }
 
 .player-options-one {
     display: flex;
-    align-items: baseline;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     padding-bottom: 2rem;
+    
 }
 
+.difficulty-options {
+    display: flex;
+    flex-direction: column;
+}
 
-
-.reset {
-    height: 2rem;
+.difficulty-options select {
     width: 9rem;
-    border: none;
+    height: 2.4rem;
+    margin-right: 1rem;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    border: var(--black) 1px solid;
+}
+
+.game-mode-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.game-mode-options select {
+    width: 9rem;
+    height: 2.4rem;
+    margin-right: 1rem;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 700;
+    border: var(--black) 1px solid;
 }
 
 .player-options-two {
     display: flex;
-    align-items: baseline;
-    justify-content: space-evenly;
-    padding-bottom: 3rem;
+    justify-content: space-between;
+    width: clamp(30rem, 80%, 50rem);
 }
 
 .choose-x,
-.choose-o {
+.choose-o,
+.reset,
+.replay {
     height: 2rem;
-    width: 9rem;
+    width: 6rem;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 900;
 }
 
-.choose-x:hover,
-.choose-o:hover {
-    cursor: pointer;
-    height: 2.1rem;
-    width: 9.1rem;
+.reset,
+.replay {
+    font-size: 0.9rem
 }
+
 
 .scoreboard {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: clamp(20rem, 25vw, 25rem);
+    margin: auto;
     padding-bottom: 2rem;
 }
 
@@ -78,6 +128,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 } 
 
 .player-one,
@@ -98,12 +149,14 @@ body {
 
 .message {
     height: 3rem;
-    width: 80%;
+    width: clamp(15rem, 80%, 50rem);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
-    background-color: aqua;
+    margin: 0 auto 3rem;
+    background-color: var(--blue);
+    border-radius: 10px;
+    font-size: clamp(0.8rem, 2vw,1rem)
 }
 
 /* PLAYER INTERFACE */
@@ -112,10 +165,9 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    height: 25rem;
-    width: 25rem;
+    height: 20rem;
+    width: 20rem;
     margin: 0 auto;
-    background-color: orangered ;
 }
 
 .top-left,
@@ -128,6 +180,7 @@ body {
 .btm-mid,
 .btm-right {
     border: 0.5rem solid black;
+    color: black;
 }
 
 .top-left:hover,
@@ -166,15 +219,118 @@ body {
     border-left: none;
 }
 
+/* MISC */
 
 .disabled {
     opacity: 0.6;
     pointer-events: none;
 }
 
+
 .symbol {
     text-align: center;
     font-weight: 900;
-    font-size: 5rem;
+    font-size: 4rem;
     padding: 0;
 }
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 640px) {
+
+
+    .page-title {
+        font-size: 1.3rem;
+    }
+
+    .option-container {
+        margin: 0 auto 2rem;
+    }
+    
+    .difficulty-options select,
+    .game-mode-options select {
+        height: 2rem;
+        width: 7.5rem;
+        font-size: 0.8rem;
+    }
+
+    .player-options-two {
+        width: clamp(25rem, 80%, 50rem);
+        margin: 0 1rem;
+    }
+
+    .choose-x,
+    .choose-o,
+    .reset,
+    .replay {
+        height: 2rem;
+        width: 5rem;
+        font-size: 0.8rem;
+    }
+
+    .scoreboard {
+        width: clamp(15rem, 25vw, 25rem);
+        margin: auto;   
+    }
+
+    .player-one,
+    .player-two {
+        font-size: 0.8rem;
+    }
+
+    .message {
+        font-size: 0.6rem;
+    }
+
+    .player-interface {
+        height: 18rem;
+        width: 18rem;
+    }
+
+    .symbol {
+        font-size: 3.6rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .difficulty-options select,
+    .game-mode-options select {
+        height: 1.6rem;
+        width: 7.5rem;
+        font-size: 0.6rem;
+    }
+
+    .player-options-two {
+        width: clamp(16rem, 80%, 50rem);
+    }
+
+    .choose-x,
+    .choose-o,
+    .reset,
+    .replay {
+        height: 1.6rem;
+        width: 3.6rem;
+        font-size: 0.6rem;
+    }
+
+    .scoreboard {
+        width: clamp(10rem, 25vw, 25rem);
+        margin: auto;   
+    }
+
+
+    .message {
+        font-size: 0.5rem;
+    }
+
+    .player-interface {
+        height: 12rem;
+        width: 12rem;
+    }
+
+    .symbol {
+        font-size: 2.5rem;
+    }
+}
+
