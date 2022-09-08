@@ -287,6 +287,43 @@ select:hover {
         width: 18rem;
     }
 
+    .top-left,
+    .top-mid,
+    .top-right,
+    .mid-left,
+    .mid-mid,
+    .mid-right,
+    .btm-left,
+    .btm-mid,
+    .btm-right {
+        border: 0.3rem solid black;
+        color: black;
+    }
+
+    .top-left,
+    .top-mid,
+    .top-right {
+        border-top: none;
+    }
+
+    .top-right,
+    .mid-right,
+    .btm-right {
+        border-right: none;
+    }
+
+    .btm-left,
+    .btm-mid,
+    .btm-right {
+        border-bottom: none;
+    }
+
+    .top-left,
+    .mid-left,
+    .btm-left {
+        border-left: none;
+    }
+
     .symbol {
         font-size: 3.6rem;
     }
